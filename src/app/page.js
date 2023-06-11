@@ -1,5 +1,6 @@
 import About from '@/sections/About'
 import ContactUs from '@/sections/ContactUs'
+import Footer from '@/sections/Footer'
 import Hero from '@/sections/Hero'
 import OurClients from '@/sections/OurClients'
 import OurTeam from '@/sections/OurTeam'
@@ -31,6 +32,8 @@ export default function Home() {
       <section id="clients">
         <OurClients />
       </section>
-      </div>
+      <Footer />
+
+    </div>
   )
 }
