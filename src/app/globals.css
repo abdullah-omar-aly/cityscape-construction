@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  overflow-y: scroll;   
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 .desktop-heading h2 {
   background-clip: text;
   -webkit-background-clip: text;
