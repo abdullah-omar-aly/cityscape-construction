@@ -1,5 +1,6 @@
 import About from '@/sections/About'
 import Hero from '@/sections/Hero'
+import OurTeam from '@/sections/OurTeam'
 import ProjectGallery from '@/sections/Projects'
 import Services from '@/sections/Services'
 import Image from 'next/image'
@@ -18,6 +19,9 @@ export default function Home() {
       </section>
       <section id="projects">
         <ProjectGallery />
+      </section>
+      <section id="our-team">
+        <OurTeam />
       </section>
       </div>
   )
