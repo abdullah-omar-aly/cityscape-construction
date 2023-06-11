@@ -1,6 +1,7 @@
 import About from '@/sections/About'
 import ContactUs from '@/sections/ContactUs'
 import Hero from '@/sections/Hero'
+import OurClients from '@/sections/OurClients'
 import OurTeam from '@/sections/OurTeam'
 import ProjectGallery from '@/sections/Projects'
 import Services from '@/sections/Services'
@@ -26,6 +27,9 @@ export default function Home() {
       </section>
       <section id="contact-us">
         <ContactUs />
+      </section>
+      <section id="clients">
+        <OurClients />
       </section>
       </div>
   )
