@@ -1,3 +1,7 @@
+"use client"
+
+import Navbar from '@/components/Navbar'
+import Sidebar from '@/components/Sidebar'
 import About from '@/sections/About'
 import ContactUs from '@/sections/ContactUs'
 import Footer from '@/sections/Footer'
@@ -7,10 +11,19 @@ import OurTeam from '@/sections/OurTeam'
 import ProjectGallery from '@/sections/Projects'
 import Services from '@/sections/Services'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
+  const [isSidebarVisible , setIsSidebarVisible] = useState(false)
+  const showSidebar = () =>  setIsSidebarVisible(true)
+  const hideSidebar = () =>  setIsSidebarVisible(false)
+  useEffect(() => {
+    console.log(isSidebarVisible)
+  } , [isSidebarVisible])
   return (
     <div>
+      <Navbar isSidebarVisible={isSidebarVisible} showSidebar={showSidebar} hideSidebar={hideSidebar}/>
+      <Sidebar isSidebarVisible={isSidebarVisible}/>
       <section id="hero">
         <Hero />
       </section>

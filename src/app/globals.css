@@ -8,6 +8,13 @@ html{
   scroll-behavior: smooth;
 }
 
+.main-nav .active-link {
+  @apply text-main-primary
+}
+
+.sidebar-nav .active-link {
+  @apply bg-main-primary
+}
 .desktop-heading h2 {
   background-clip: text;
   -webkit-background-clip: text;
