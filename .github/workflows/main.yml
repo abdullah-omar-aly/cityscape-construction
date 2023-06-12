@@ -19,11 +19,11 @@ jobs:
       - name: Print Hello world 2
         run: echo "Hello World 2"
         shell: bash
+      - name: Setup Node js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
-
-
-
-      
 
 
       
