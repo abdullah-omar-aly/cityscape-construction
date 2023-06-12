@@ -20,7 +20,7 @@ jobs:
         run: echo "Hello World 2"
         shell: bash
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v3
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: arn:aws:iam::892655112081:role/cityscape-construction-github-action
           aws-region: us-east-1
