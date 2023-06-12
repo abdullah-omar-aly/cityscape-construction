@@ -1,0 +1,30 @@
+name: 'deploy cityscape-construction'
+
+on: 
+  push: 
+    branches: 
+      -master
+
+permissions: 
+    id-token: write 
+    contents: read
+      
+jobs: 
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout The Code  
+        uses: actions/checkout@v2
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::892655112081:role/cityscape-construction-github-action
+          aws-region: us-east-1
+      - name: Build The App
+        run: pnpm install && pnpm run build
+      - name: Deploy the site
+        run: aws s3 sync ./out s3://cityscape-consturction    --delete
+
+
+
+      
