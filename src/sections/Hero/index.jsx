@@ -110,7 +110,7 @@ const Hero = () => {
                         <Image
                             src='/main-slider-1.jpg'
                             alt="Hero Image"
-                            loading='lazy'
+                            loading='eager'
                             placeholder='blur'
                             blurDataURL='/main-slider-placeholder.jpg'
                             fill={true}
