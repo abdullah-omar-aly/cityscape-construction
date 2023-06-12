@@ -23,7 +23,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-
+      - name: Install Pnpm
+        run:  npm install -g pnpm
+      - name: Build The App
+        run: pnpm install && pnpm run build
 
 
       
