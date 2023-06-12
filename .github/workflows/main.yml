@@ -23,7 +23,7 @@ jobs:
       - name: Build The App
         run: pnpm install && pnpm run build
       - name: Deploy the site
-        run: aws s3 sync ./out s3://cityscape-consturction    --delete
+        run: aws s3 sync ./out s3://cityscape-consturction --delete
 
 
 
