@@ -19,21 +19,7 @@ jobs:
       - name: Print Hello world 2
         run: echo "Hello World 2"
         shell: bash
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
-        with:
-          role-to-assume: arn:aws:iam::892655112081:role/cityscape-construction-github-action
-          aws-region: us-east-1
-      - name: Setup Node js
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: Install Pnpm
-        run:  npm install -g pnpm
-      - name: Build The App
-        run: pnpm install && pnpm run build
-      - name: Deploy the site
-        run: aws s3 sync ./out s3://cityscape-consturction --delete
+
 
 
 
