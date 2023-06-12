@@ -3,7 +3,7 @@ name: s3 deployment workflow
 on: 
   push: 
     branches: 
-      -master
+      - master
   workflow_dispatch: 
 
 
@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: Checkout The Code  
         uses: actions/checkout@v2
-      - name: Print Hello world 
-        run: echo "Hello World"
+      - name: Print Hello world 2
+        run: echo "Hello World 2"
         shell: bash
       - name: Print Good bye world 
         run: echo "Good bye"
